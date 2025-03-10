@@ -1,4 +1,4 @@
-export const pipe = (...fns) => (arg) => fns.reduce((acc, fn) => fn(acc), arg);
+import { pipe } from "./helpers.js";
 
 const str = "A dog with an elephant in the room";
 

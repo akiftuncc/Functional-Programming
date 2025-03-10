@@ -1,16 +1,5 @@
-import {pipe} from "./function-composition.js";
-
-export function curry(fn,arity=fn.length){
-    return (function nextCurried(prevArgs){
-        return function curried(nexArg){
-            const args = [...prevArgs,nexArg];
-            if(args.length >= arity){
-                return fn(...args);
-            }
-            return nextCurried(args);
-        }
-    })([])
-}
+import {pipe} from "./helpers.js";
+import { curry } from "./helpers.js";
 
 const curryHello = (greeting) =>{
     return (name) =>{

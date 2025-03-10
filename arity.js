@@ -1,6 +1,6 @@
-import { pipe } from "./function-composition.js";
-import { clone } from "./clone-obj.js";
-import { USERS } from "./clone-obj.js";
+import { pipe } from "./helpers.js";
+import { clone } from "./helpers.js";
+import { USERS } from "./helpers.js";
 const users = USERS;
 
 const getUser = (users,name) => users.find(user => user.name.toLowerCase() === name.toLowerCase());
